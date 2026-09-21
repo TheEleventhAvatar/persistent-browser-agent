@@ -1,3 +1,7 @@
+
+
+https://github.com/user-attachments/assets/01c12db0-3628-4d5d-9c14-b570370ee5d2
+
 # Persistent Browser Agent
 
 A browser-automation agent that can be handed a multi-step task, execute it with
