@@ -13,7 +13,7 @@ a retry doesn't repeat the same dead end). A live web dashboard shows all of
 this happening in real time.
 
 This is a starter scaffold, not a finished product, but it's no longer a toy —
-every mechanism below is tested end to end. See "Demo script" for how to film it.
+every mechanism below is tested end to end.
 
 ## Why this exists
 
@@ -142,29 +142,6 @@ python cli.py resume <task_id>
 
 Run the same task file again later and watch it skip straight past any URL it
 already has fresh data for.
-
-## Demo script (for the video)
-
-Two beats worth filming, back to back — the resume moment and the cache-reuse
-moment. Keep the dashboard tab in frame the whole time; it's the visual.
-
-**Beat 1 — resume (proves memory within a task):**
-1. **0:00–0:15** — One line on camera: "I'm giving it a real multi-step task:
-   research pricing across N sites and build a comparison doc." Run `start`.
-2. **0:15–0:45** — Dashboard shows steps lighting up: pulsing amber
-   (`in_progress`) → green check (`done`), each with its extracted result.
-3. **0:45–0:55** — Mid-task, kill the process (Ctrl+C). Deliberate and visible.
-4. **0:55–1:10** — Run `resume`. Terminal prints `resuming: 2/4 sub-goals
-   already done`; dashboard shows it pick up exactly where it stopped. If the
-   interrupted step needs a retry, you'll also see it succeed with a
-   different approach than what failed before — call that out.
-5. **1:10–1:30** — Show the compiled `logs/<task_id>_comparison.md`.
-
-**Beat 2 — cross-task cache (proves memory across separate runs):**
-6. **1:30–1:45** — Run the *same* task file again. This time, narrate: "same
-   task, fresh process — but it already knows this." Point at the terminal
-   line `reusing cached result... skipping browser` and how fast it finishes
-   compared to beat 1.
 
 ## Extending this
 
